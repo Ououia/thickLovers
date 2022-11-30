@@ -129,7 +129,7 @@ nav {
 
 #getinvolvedcontent {
   display: flex;
-  gap: 5em;
+  gap: 10em;
   padding: 0px 10em;
   margin-bottom: 30px;
 }
@@ -148,6 +148,10 @@ nav {
 .involvedtitle {
   color: red;
   margin-top: 10px;
+}
+
+.involvedtext {
+  width: 15em;
 }
 
 /* css footer  */
@@ -183,11 +187,17 @@ footer img {
     font-size: 4em;
     text-align: center;
   }
-  .desktopbr {
-    display: none;
-  }
+
   #who p {
     padding: 0 6em;
+  }
+
+  #getinvolvedcontent {
+    gap: 7em;
+  }
+
+  .desktopbr {
+    display: none;
   }
 }
 
@@ -217,6 +227,10 @@ footer img {
   nav {
     justify-content: space-between;
     padding: 25px;
+  }
+
+  .desktopbr {
+    display: none;
   }
 
   #menu {
