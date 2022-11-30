@@ -217,11 +217,25 @@ footer img {
     display: none;
   }
 
+  #menumobile {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
   #menumobile a {
     color: #8f8f90;
     display: flex;
-    gap: 15px;
+    border: 2px white solid;
+    border-radius: 3px;
     text-decoration: inherit; /* no underline */
+    padding: 5px;
+  }
+
+  #menumobile a:hover {
+    color: #ffffff;
+    text-decoration: underline;
   }
 
   #hamburgermenu {
