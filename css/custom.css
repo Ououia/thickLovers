@@ -166,6 +166,8 @@ footer img {
   margin-bottom: 2em;
 }
 
+/* boutton pour remonter en haut de la page */
+
 #back-to-top {
   position: fixed;
   bottom: 20px;
