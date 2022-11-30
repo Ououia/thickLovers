@@ -34,7 +34,7 @@ nav {
 /* css jumbotron  */
 
 #home {
-  background-image: url("/images/hero-image.jpg");
+  background-image: url("./images/hero-image.jpg");
   width: 100%;
 
   background-size: cover;
