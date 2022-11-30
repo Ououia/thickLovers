@@ -1,0 +1,271 @@
+body {
+  font-family: "Roboto Slab", serif;
+}
+
+/* css navbar */
+
+nav {
+  display: flex;
+  background-color: #222222;
+  justify-content: space-around;
+  height: 3em;
+  align-items: center;
+}
+
+#menu {
+  color: #8f8f90;
+  display: flex;
+  gap: 15px;
+}
+
+#menu a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+
+#hamburgermenu {
+  display: none;
+}
+
+#menucollapse {
+  display: none;
+}
+
+/* css jumbotron  */
+
+#home {
+  background-image: url("/images/hero-image.jpg");
+  width: 100%;
+
+  background-size: cover;
+}
+
+#jumbotron {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  height: 100%;
+}
+
+#jumbotron h1 {
+  color: white;
+  font-size: 4em;
+  text-align: center;
+  margin-top: 25px;
+}
+
+#jumbotron p {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  display: block;
+  float: left;
+  font-weight: lighter;
+}
+#jumbotron p strong {
+  font-weight: bold;
+}
+
+#jumbotron img {
+  margin-bottom: 35px;
+}
+#jumbotron button {
+  font-size: 26px;
+}
+
+.articletitle {
+  color: #e74c3e;
+  font-size: 25px;
+  margin-top: 25px;
+  font-weight: 500;
+}
+
+.articlehr {
+  color: #e74c3e;
+  border-top: 1px solid;
+  opacity: 1;
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+/* css who */
+
+#who {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+#who img {
+  margin-top: 40px;
+}
+
+#who p {
+  text-align: center;
+  font-size: 16px;
+}
+
+#who p strong {
+  color: red;
+  font-weight: normal;
+}
+
+/* css involved */
+
+#get-involved {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#getinvolvedcontent {
+  display: flex;
+  gap: 5em;
+  padding: 0px 10em;
+  margin-bottom: 30px;
+}
+
+#students,
+#educators,
+#sponsors {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.involvedtitle {
+  color: red;
+  margin-top: 10px;
+}
+
+/* css footer  */
+
+footer {
+  height: 12em;
+
+  background-color: #f74c3c;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+footer img {
+  margin-left: 14em;
+  margin-bottom: 2em;
+}
+
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1200px) {
+  #jumbotron h1 {
+    color: white;
+    font-size: 4em;
+    text-align: center;
+  }
+  .desktopbr {
+    display: none;
+  }
+  #who p {
+    padding: 0 6em;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  #jumbotron h1 {
+    color: white;
+    font-size: 3em;
+    text-align: center;
+  }
+
+  #getinvolvedcontent {
+    display: flex;
+    flex-direction: column;
+    gap: 5em;
+    padding: 0px 10em;
+  }
+  footer img {
+    margin-left: 8em;
+    margin-bottom: 2em;
+  }
+  .desktopbr {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  nav {
+    justify-content: space-between;
+    padding: 25px;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  #menumobile a {
+    color: #8f8f90;
+    display: flex;
+    gap: 15px;
+    text-decoration: inherit; /* no underline */
+  }
+
+  #hamburgermenu {
+    color: white;
+    display: block;
+    display: block;
+  }
+
+  #jumbotron h1 {
+    color: white;
+    font-size: 1em;
+    text-align: center;
+  }
+
+  #jumbotron p {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    font-size: 13px;
+    padding: 0px 19px;
+  }
+
+  #jumbotron button {
+    font-size: 15px !important;
+  }
+
+  #who p {
+    font-size: 13px !important;
+    padding: 0;
+  }
+
+  #getinvolvedcontent {
+    display: flex;
+    flex-direction: column;
+    gap: 5em;
+    padding: 0;
+  }
+
+  .involvedtext {
+    font-size: 13px;
+  }
+
+  footer img {
+    margin-left: 12px;
+    margin-right: auto;
+  }
+}
