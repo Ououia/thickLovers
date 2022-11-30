@@ -23,6 +23,10 @@ nav {
   text-decoration: inherit; /* no underline */
 }
 
+#menu a:hover {
+  color: white;
+}
+
 #hamburgermenu {
   display: none;
 }
