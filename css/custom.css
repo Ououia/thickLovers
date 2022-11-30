@@ -227,7 +227,7 @@ footer img {
   #menumobile a {
     color: #8f8f90;
     display: flex;
-    border: 2px white solid;
+
     border-radius: 3px;
     text-decoration: inherit; /* no underline */
     padding: 5px;
@@ -235,7 +235,7 @@ footer img {
 
   #menumobile a:hover {
     color: #ffffff;
-    text-decoration: underline;
+    border: 2px white solid;
   }
 
   #hamburgermenu {
