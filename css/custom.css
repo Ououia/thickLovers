@@ -82,6 +82,9 @@ nav {
 #jumbotron button {
   font-weight: 500;
 }
+#jumbotron button:hover {
+  background-color: #f74c3c !important;
+}
 
 .articletitle {
   color: #e74c3e;
@@ -140,6 +143,18 @@ nav {
   gap: 10em;
   padding: 0px 10em;
   margin-bottom: 30px;
+}
+
+#getinvolvedcontent button {
+  border: 1px solid red;
+  background-color: white;
+  border-radius: 3px;
+  font-size: 15px;
+  color: #f74c3c;
+}
+#getinvolvedcontent button:hover {
+  background-color: #f74c3c;
+  color: white;
 }
 
 #students,
