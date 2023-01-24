@@ -19,9 +19,9 @@ nav {
 }
 
 #menu a {
-  color: inherit; /* blue colors for links too */
+  color: white; /* blue colors for links too */
   text-decoration: inherit; /* no underline */
-  font-family: "Arvo", serif;
+
   font-size: 13px;
   font-weight: 600;
 }
@@ -38,6 +38,13 @@ nav {
   display: none;
 }
 
+.service {
+  float: left;
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+
 /* css jumbotron  */
 
 /* #home {
@@ -48,7 +55,7 @@ nav {
 } */
 
 img.d-block.w-100 {
-  height: 450px;
+  height: 550px;
 }
 
 #jumbotron {
@@ -91,7 +98,7 @@ img.d-block.w-100 {
 }
 
 .articletitle {
-  color: #e74c3e;
+  color: #1d12e8;
   font-size: 30px;
   margin-top: 25px;
   font-weight: 500;
@@ -150,7 +157,7 @@ img.d-block.w-100 {
 }
 
 #getinvolvedcontent button {
-  border: 1px solid red;
+  border: 1px solid rgb(38, 31, 238);
   background-color: white;
   border-radius: 3px;
   font-size: 15px;
@@ -173,7 +180,7 @@ img.d-block.w-100 {
 }
 
 .involvedtitle {
-  color: red;
+  color: rgb(33, 30, 244);
   margin-top: 10px;
   font-family: "Arvo", serif;
 }
@@ -187,7 +194,7 @@ img.d-block.w-100 {
 footer {
   height: 12em;
 
-  background-color: #f74c3c;
+  background-color: #0d6efd;
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
