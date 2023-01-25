@@ -1,169 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Meta tags -->
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Git Pime</title>
 
-    <meta name="description" content="1 million lines" />
+<head>
+  <!-- Meta tags -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Git Pime</title>
 
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:url"
-      content="https://ououia.github.io/onemillionlines/"
-    />
-    <meta property="og:title" content="One Million Lines" />
-    <meta property="og:description" content="Site ecf One Million Lines" />
-    <meta
-      property="og:image"
-      content="https://ououia.github.io/onemillionlines/images/hero-image.jpg"
-    />
-    <!-- end Meta -->
+  <meta name="description" content="1 million lines" />
 
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ououia.github.io/onemillionlines/" />
+  <meta property="og:title" content="One Million Lines" />
+  <meta property="og:description" content="Site ecf One Million Lines" />
+  <meta property="og:image" content="https://ououia.github.io/onemillionlines/images/hero-image.jpg" />
+  <!-- end Meta -->
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-      crossorigin="anonymous"
-    />
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css" />
 
-    <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Arvo&family=Roboto:wght@100;400&display=swap"
-      rel="stylesheet"
-    />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
 
-    <!-- Custom styles for this template -->
-    <link href="css/custom.css?v=1.8" rel="stylesheet" />
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Roboto:wght@100;400&display=swap" rel="stylesheet" />
 
-    <script
-      src="https://kit.fontawesome.com/ebebeaafad.js"
-      crossorigin="anonymous"
-    ></script>
+  <!-- Custom styles for this template -->
+  <link href="css/custom.css?v=1.8" rel="stylesheet" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
+  <script src="https://kit.fontawesome.com/ebebeaafad.js" crossorigin="anonymous"></script>
 
-    <!-- MDB / Js pour menu burger -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.js"></script>
-  </head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
-  <body>
-    <nav class="navbar h-100" style="background-color: #00003d">
-      <div class="container-fluid">
-        <img
-          class="rounded-4"
-          src="/images/logoGitPim.png"
-          alt="top-logo"
-          style="filter: invert(1)"
-        />
-        <div id="menu" class="gap-5 link-white d-none d-lg-flex">
-          <a href="./index.html" class="link-white text-decoration-none fs-6"
-            >Accueil
-          </a>
-          <a href="./reservation.html" class="link-white text-decoration-none fs-6"
-            >Reserver</a
-          >
-        </div>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasNavbar"
-          aria-controls="offcanvasNavbar"
-        >
-          <span class="bg-white btn-group navbar-toggler-icon d-lg-none"></span>
-        </button>
-        <div
-          class="offcanvas offcanvas-end"
-          tabindex="-1"
-          id="offcanvasNavbar"
-          aria-labelledby="offcanvasNavbarLabel"
-        >
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">GIT PIM</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-              <li class="nav-item">
-                <a class="nav-link" href="#">Accueil</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Reserver</a>
-              </li>
-            </ul>
-          </div>
-        </div>
+  <!-- MDB / Js pour menu burger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.js"></script>
+</head>
+
+<body>
+  <nav class="navbar h-100" style="background-color: #00003d">
+    <div class="container-fluid">
+      <img class="rounded-4" src="./images/logoGitPim.png" alt="top-logo" style="filter: invert(1)" />
+      <div id="menu" class="gap-5 link-white d-none d-lg-flex">
+        <a href="./index.html" class="link-white text-decoration-none fs-6">Accueil
+        </a>
+        <a href="./reservation.html" class="link-white text-decoration-none fs-6">Réservez</a>
       </div>
-    </nav>
-
-    <div id="home">
-      <div
-        id="carouselExampleAutoplaying"
-        class="carousel slide"
-        data-bs-ride="carousel"
-      >
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img
-              src="/images/ilandcarrousel.webp"
-              class="d-block w-100"
-              alt="..."
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-              src="/images/gitecarrousel.jpg"
-              class="d-block w-100"
-              alt="..."
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-              src="/images/gite-moague.jpg"
-              class="d-block w-100"
-              alt="..."
-            />
-          </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar">
+        <span class="bg-white btn-group navbar-toggler-icon d-lg-none"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">GIT PIM</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleAutoplaying"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleAutoplaying"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Accueil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Réservez</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
+  </nav>
 
-    <!-- <div id="who">
+  <div id="home">
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./images/ilandcarrousel.webp" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img src="./images/gitecarrousel.jpg" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img src="./images/gite-moague.jpg" class="d-block w-100" alt="..." />
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- <div id="who">
       <img
         id="whoarewe"
         src="images/academy-brand-med.png"
@@ -181,96 +116,111 @@
         are applicable to improving your life today
       </p>
     </div> -->
-    <!-- /#who -->
+  <!-- /#who -->
 
-    <div id="get-involved">
-      <h2 id="getinvolved" class="articletitle">SERVICES</h2>
-      <hr
-        class="articlehr"
-        style="width: 9em; text-align: left; margin-left: 0"
-      />
-      <div id="getinvolvedcontent">
-        <div id="students">
-          <img src="/images/reso.jpg" alt="" class="service" />
+  <div id="get-story">
+    <h2 id="getstory" class="articletitle">HISTOIRE</h2>
+    <hr class="articlehr" style="width: 9em; text-align: left; margin-left: 0" />
+    <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center gap-5 mb-5">
+      <div class="w-50 text-center">
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi a in ut totam, dolor ipsam nostrum doloremque reprehenderit aliquam numquam odit, libero, rem itaque modi. Illum voluptas ex a asperiores!
+        </p>
+      </div>
+      <div >
+        <img src="./images/gite-story-img.png" alt="Image of gite" class="servicehistoire">
+      </div>
+    </div>
+  </div>
 
-          <h3 class="involvedtitle">Resto</h3>
-          <!-- <p class="involvedtext">
+  <div id="get-involved">
+    <h2 id="getinvolved" class="articletitle">SERVICES</h2>
+    <hr class="articlehr" style="width: 9em; text-align: left; margin-left: 0" />
+    <div id="getinvolvedcontent">
+      <div id="students">
+        <img src="./images/reso.jpg" alt="" class="service" />
+
+        <h3 class="involvedtitle">Restaurant Pom</h3>
+        <p class="involvedtext">Besoin d'une pause gourmande entre deux activités ? Venez vous installer
+          dans notre restaurant et appréciez nos bons petits plats
+        </p>
+        <button type="submit" class="btn-reservation">Réservez</button>
+        <!-- <p class="involvedtext">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat,
             dignissimos.
             <span class="desktopbr"><br /></span> how to get involved.
           </p> -->
-        </div>
+      </div>
 
-        <div id="educators">
-          <img src="/images/kayak.jpg" alt="" class="service" />
+      <div id="educators">
+        <img src="./images/kayak.jpg" alt="" class="service" />
 
-          <h3 class="involvedtitle">Kayak</h3>
-          <!-- <p class="involvedtext">
+        <h3 class="involvedtitle">Canoë / Kayak</h3>
+        <p class="involvedtext">Optez pour l'activité du Canoë / Kayak et profitez-en
+          pour admirez le paysage autour de vous</p>
+        </p>
+        <button type="submit" class="btn-reservation">Réservez</button>
+        <!-- <p class="involvedtext">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia,
             nostrum.
             <span class="desktopbr"><br /></span> happen
           </p> -->
-        </div>
+      </div>
 
-        <div id="sponsors">
-          <img src="/images/velo.jpeg" alt="" class="service" />
+      <div id="sponsors">
+        <img src="./images/velo.jpeg" alt="" class="service" />
 
-          <h3 class="involvedtitle">Velo</h3>
-          <!-- <p class="involvedtext">
+        <h3 class="involvedtitle">Randonnée</h3>
+        <p class="involvedtext">On dit que le bonheur n'est pas au bout du chemin, il est le chemin !
+          Réservez dès maintenant, votre randonnée.
+        </p>
+        <button type="submit" class="btn-reservation">Réservez</button>
+        <!-- <p class="involvedtext">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Repellendus, ratione!
             <span class="desktopbr"><br /></span> Click to get involved
           </p> -->
-        </div>
       </div>
     </div>
-    <!-- /#get-involved -->
+  </div>
+  <!-- /#get-involved -->
 
-    <button
-      type="button"
-      id="back-to-top"
-      style="background-color: black; color: white; border-radius: 50%"
-    >
-      <i class="fas fa-arrow-up"></i>
-    </button>
+  <button type="button" id="back-to-top" style="background-color: black; color: white; border-radius: 50%">
+    <i class="fas fa-arrow-up"></i>
+  </button>
 
-    <footer>
-      <img
-        src="/images/logoGitPim.png  "
-        alt="logo-omemillionlines"
-        class="align-self-md-center d-flex rounded-4 m-5"
-      />
-    </footer>
-    <!-- /#back-to-top -->
-    <script>
-      let mybutton = document.getElementById("back-to-top");
+  <footer>
+    <img src="./images/logoGitPim.png  " alt="logo-omemillionlines" class="align-self-md-center d-flex rounded-4 m-5" style="filter: invert(1)" />
+  </footer>
+  <!-- /#back-to-top -->
+  <script>
+    let mybutton = document.getElementById("back-to-top");
 
-      window.onscroll = function () {
-        scrollFunction();
-      };
+    window.onscroll = function () {
+      scrollFunction();
+    };
 
-      function scrollFunction() {
-        if (
-          document.body.scrollTop > 20 ||
-          document.documentElement.scrollTop > 20
-        ) {
-          mybutton.style.display = "block";
-        } else {
-          mybutton.style.display = "none";
-        }
+    function scrollFunction() {
+      if (
+        document.body.scrollTop > 20 ||
+        document.documentElement.scrollTop > 20
+      ) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
       }
+    }
 
-      mybutton.addEventListener("click", backToTop);
+    mybutton.addEventListener("click", backToTop);
 
-      function backToTop() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-      }
-    </script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+    function backToTop() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
