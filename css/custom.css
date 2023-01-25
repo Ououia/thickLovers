@@ -114,6 +114,11 @@ img.d-block.w-100 {
   margin-top: 10px;
   margin-bottom: 20px;
 }
+/*css module reservation*/
+
+#formResa{
+  text-align: start;
+}
 
 /* css who */
 
@@ -210,6 +215,10 @@ footer {
   display: none;
 }
 
+/* addons*/
+input.w60p{
+  width: 60px!important;
+}
 /* MEDIA QUERIES */
 
 @media (max-width: 1200px) {
