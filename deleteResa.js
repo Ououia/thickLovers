@@ -1,4 +1,5 @@
 getRoomReservation();
+getActivityReservation();
 
 // recupere les reservations de chambres et affiche dans le tableau '#tableResa'
 function getRoomReservation() {
@@ -11,11 +12,10 @@ function getRoomReservation() {
     success: function (response) {
       response = JSON.parse(response);
       console.log(response);
-      $("#tableResa").empty(); // empty table before load it
-      $("#tableResa").addClass(" table table-bordered mx-5 ");
+      $("#tableResaRoom").empty(); // empty table before load it
+      $("#tableResaRoom").addClass(" table table-bordered mx-5 ");
       let tHead = `<thead>
                  <tr>
-                     <th>#</th>
                      <th>Chambre N°</th>
                      <th>Type</th>
                      <th>Vue sur</th>
@@ -25,13 +25,10 @@ function getRoomReservation() {
                  </tr>
              </thead>`;
 
-      $("#tableResa").append(tHead);
+      $("#tableResaRoom").append(tHead);
       $.each(response, function (key, value) {
-        $("#tableResa").append(
+        $("#tableResaRoom").append(
           "<tbody><tr>" +
-            "<td>" +
-            value.id +
-            "</td>" +
             "<td>" +
             value.number +
             "</td>" +
@@ -71,7 +68,7 @@ function deleteRoomResa(myIdResa) {
     async: false,
     
     success: function ($mockData) {
-      alert("Votre réservation n°"+myIdResa+" a bien été supprimée !");
+      alert("Votre réservation de chambre n°"+myIdResa+" a bien été supprimée !");
       getRoomReservation();
     },
     error: function (request, error) {
@@ -79,56 +76,47 @@ function deleteRoomResa(myIdResa) {
     },
   });
 }
-getRoomReservation();
 
-// recupere les reservations de chambres et affiche dans le tableau '#tableResa'
-function getRoomReservation() {
+// recupere les reservations des activités et affiche dans le tableau '#tableResaActivity'
+function getActivityReservation() {
   $.ajax({
-    url: "https://tst.quantiq.nc/devweb-cfa/api/index.php?service=gite&object=roomreservation&action=list",
+    url: "https://tst.quantiq.nc/devweb-cfa/api/index.php?service=gite&object=activityreservation&action=list",
     type: "GET",
     cache: false,
     async: false,
 
     success: function (response) {
       response = JSON.parse(response);
-      console.log(response);
-      $("#tableResa").empty(); // empty table before load it
-      $("#tableResa").addClass(" table table-bordered mx-5 ");
+      $("#tableResaActivity").empty(); // empty table before load it
+      $("#tableResaActivity").addClass(" table table-bordered mx-5 ");
       let tHead = `<thead>
                  <tr>
-                     <th>#</th>
-                     <th>Chambre N°</th>
-                     <th>Type</th>
-                     <th>Vue sur</th>
-                     <th>Date entrée</th>
-                     <th>Date sortie</th>
-                     <th>Action</th>
+                     <th>Activité</th>
+                     <th>Date</th>
+                     <th>Heure Debut</th>
+                     <th>Heure Fin</th>
+                     <th>Annuler une réservation</th>
                  </tr>
              </thead>`;
 
-      $("#tableResa").append(tHead);
+      $("#tableResaActivity").append(tHead);
       $.each(response, function (key, value) {
-        $("#tableResa").append(
+        $("#tableResaActivity").append(
           "<tbody><tr>" +
             "<td>" +
-            value.id +
+            value.activite +
             "</td>" +
             "<td>" +
-            value.number +
+            value.date +
             "</td>" +
             "<td>" +
-            value.type +
+            value.heureDebut +
             "</td>" +
             "<td>" +
-            value.landscape +
+            value.heureFin +
             "</td>" +
-            "<td>" +
-            value.dateEntree +
-            "</td>" +
-            "<td>" +
-            value.dateSortie +
-            "</td>" +
-            `<td><a onclick="deleteRoomResa(` +
+          
+            `<td><a onclick="deleteActivityResa(` +
             value.id +
             `)" ><i class="fa-solid fa-times "></a></i></td>` +
             "</tr></tbody>"
@@ -137,23 +125,24 @@ function getRoomReservation() {
     },
   });
 }
-//supprime une réservation de chambre
-function deleteRoomResa(myIdResa) {
+//supprime une réservation d'activité
+function deleteActivityResa(myIdResaActivity) {
+  console.log(myIdResaActivity)
   $.ajax({
     type: "POST",
     url: "https://tst.quantiq.nc/devweb-cfa/api/index.php",
     data: {
-      idRoomReservation: myIdResa,
+      idActivityReservation : myIdResaActivity,
       token: "D@lL@5Mùl!P@5S3",
       action: "cancel",
-      object: "roomreservation",
+      object: "activityreservation",
       service: "gite",
     },
     async: false,
     
     success: function ($mockData) {
-      alert("Votre réservation n°"+myIdResa+" a bien été supprimée !");
-      getRoomReservation();
+      alert("Votre activité réservée n°"+myIdResaActivity+"  a bien été supprimée !");
+      getActivityReservation();
     },
     error: function (request, error) {
       console.log("ERROR:" + error);
