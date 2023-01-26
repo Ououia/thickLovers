@@ -34,25 +34,7 @@ fetch(
     });
   });
 
-// recupere les type d activite
-fetch(
-  "https://tst.quantiq.nc/devweb-cfa/api/index.php?service=gite&object=activity&action=list"
-)
-  .then((response) => response.json())
-  .then((data) => {
-    data.forEach((element) => {
-      var select = document.getElementById("typeofactivity");
-      const newOption = document.createElement("option");
-      newOption.setAttribute("value", element);
-      const optionText = document.createTextNode(element);
-      // set option text
-      newOption.appendChild(optionText);
-
-      select.appendChild(newOption);
-    });
-  });
-
-// FAIRE UNE RESERVATION
+// FAIRE UNE RESERVATION DE CHAMBRE
 function sendReservation() {
   dateEntree = document.getElementById("dateEntree").value;
   selectElement = document.getElementById("typeofroom");
@@ -88,9 +70,9 @@ function postData(idRoom) {
   xhr.onload = () => {
     console.log(xhr.readyState, xhr.status);
     if (xhr.readyState == 4 && xhr.status == 200) {
-      console.log(JSON.parse(xhr.responseText));
+      alert("Votre Réservation a été enregistrer avec Success");
     } else {
-      console.log("Error:");
+      alert("Il y a eu une erreur lors de votre reservation");
     }
   };
 
@@ -112,22 +94,63 @@ function postData(idRoom) {
   );
 }
 
-// SUPPRIMER UNE RESERVATION
-function deleteReservation() {
-  var html = new XMLHttpRequest();
-  html.onreadystatechange = function () {
-    if (html.readyState == XMLHttpRequest.DONE) {
-      parsedResponse = JSON.parse(html.responseText);
-      idRoom = parsedResponse[0].id;
-      postData(idRoom);
+// recupere les type d activités
+fetch(
+  "https://tst.quantiq.nc/devweb-cfa/api/index.php?service=gite&object=activity&action=list"
+)
+  .then((response) => response.json())
+  .then((data) => {
+    data.forEach((element) => {
+      var select = document.getElementById("typeofactivity");
+      const newOption = document.createElement("option");
+      newOption.setAttribute("value", element);
+      const optionText = document.createTextNode(element);
+      // set option text
+      newOption.appendChild(optionText);
+
+      select.appendChild(newOption);
+    });
+  });
+
+function postActivity() {
+  selectElement = document.getElementById("typeofactivity");
+  typeActivity = selectElement.value;
+  dateEntree = document.getElementById("dateentreeactivity").value;
+  heureEntree = document.getElementById("heureentree").value;
+  heureSortie = document.getElementById("datesortieactivity").value;
+
+  const xhr = new XMLHttpRequest();
+  xhr.open("POST", "https://tst.quantiq.nc/devweb-cfa/api/index.php", true);
+  xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+  xhr.onload = () => {
+    console.log(xhr.readyState, xhr.status);
+    if (xhr.readyState == 4 && xhr.status == 200) {
+      console.log(JSON.parse(xhr.responseText));
+      alert("Votre Réservation a été enregistrer avec Success");
+    } else {
+      alert("Il y a eu une erreur lors de votre reservation");
     }
   };
-  html.open(
-    "GET",
-    "https://tst.quantiq.nc/devweb-cfa/api/index.php?service=gite&object=roomreservation&action=list",
-    true
+
+  xhr.send(
+    "service=" +
+      "gite" +
+      "&object=" +
+      "activityreservation" +
+      "&action=" +
+      "create" +
+      "&token=" +
+      "D@lL@5Mùl!P@5S3" +
+      "&activite=" +
+      typeActivity +
+      "&date=" +
+      dateEntree +
+      "&heureDebut=" +
+      heureEntree +
+      "&heureFin=" +
+      heureSortie
   );
-  html.send(null);
 }
 
 // BUTTON ARROW UP

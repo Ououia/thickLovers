@@ -8,23 +8,13 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Git Pime</title>
 
-    <meta name="description" content="1 million lines" />
+    <meta name="description" content="gite pim Thick Lovers" />
 
     <meta property="og:type" content="website" />
-    <meta
-      property="og:url"
-      content="https://ououia.github.io/onemillionlines/"
-    />
-    <meta property="og:title" content="One Million Lines" />
-    <meta property="og:description" content="Site ecf One Million Lines" />
-    <meta
-      property="og:image"
-      content="https://ououia.github.io/onemillionlines/images/hero-image.jpg"
-    />
+    <meta property="og:url" content="https://ououia.github.io/thicklovers/" />
+    <meta property="og:title" content="Gite Pim" />
+    <meta property="og:description" content="Site ECF Gite Pim" />
     <!-- end Meta -->
-
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css" />
 
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
@@ -62,11 +52,12 @@
     <header>
       <nav class="navbar h-100" style="background-color: #00003d">
         <div class="container-fluid test">
-          <img
-            src="./images/logo_gite_pim.png"
-            alt="top-logo"
-            style="filter: invert(1); width: 170px; margin-left: 50px"
-          />
+          <a href="./index.html">
+            <img
+              src="./images/logo_gite_pim.png"
+              alt="top-logo"
+              style="filter: invert(1); width: 170px; margin-left: 50px"
+          /></a>
           <div id="menu" class="gap-5 link-white d-none d-lg-flex">
             <a href="./index.html" class="link-white text-decoration-none fs-5"
               >Accueil
@@ -80,6 +71,11 @@
               href="./reservation.html"
               class="link-white text-decoration-none fs-5"
               >Réservez</a
+            >
+            <a
+              href="./mesReservations.html"
+              class="link-white text-decoration-none fs-5"
+              >Mes réservations</a
             >
           </div>
           <button
@@ -126,6 +122,11 @@
                 <li class="nav-item">
                   <a class="nav-link" href="./reservation.html">Réservez</a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./mesReservations.html"
+                    >Mes réservations</a
+                  >
+                </li>
               </ul>
             </div>
           </div>
@@ -135,7 +136,10 @@
 
     <h2 class="articletitle text-center mb-5">RÉSERVATION</h2>
 
-    <div id="RoomForm" class="d-flex justify-content-evenly gap-5 mb-5">
+    <div
+      id="RoomForm"
+      class="d-flex flex-column flex-lg-row justify-content-evenly gap-5 mb-5"
+    >
       <div>
         <h3 class="articletitle text-center mb-5 text-uppercase">Chambres</h3>
         <div class="d-flex gap-5">
@@ -168,7 +172,7 @@
             </p>
 
             <input
-              class="btn btn-success"
+              class="btn btn-primary"
               type="button"
               value="reserver"
               onclick="sendReservation()"
@@ -176,10 +180,11 @@
           </div>
 
           <div id="sponsors">
-            <img src="/images/room1.jpg" alt="" class="service" />
+            <img src="./images/room1.jpg" alt="" class="service rounded-4" />
 
-            <h3 class="involvedtitle">-5% cet été !!*</h3>
-            <p>*cumulable avec votre code promo</p>
+            <h3 class="involvedtitle mt-4 text-center text-info">
+              -5% cet été !!*
+            </h3>
           </div>
         </div>
       </div>
@@ -227,18 +232,19 @@
             </p>
 
             <input
-              class="btn btn-success"
+              class="btn btn-primary"
               type="button"
               value="reserver"
-              onclick="activityReservation()"
+              onclick="postActivity()"
             />
           </div>
 
           <div id="sponsors">
-            <img src="/images/velo.jpeg" alt="" class="service" />
+            <img src="./images/velo.jpeg" alt="" class="service rounded-4" />
 
-            <h3 class="involvedtitle">-5% cet été !!*</h3>
-            <p>*cumulable avec votre code promo</p>
+            <h3 class="involvedtitle mt-4 text-center text-info">
+              -15% cet été !!*
+            </h3>
           </div>
         </div>
       </div>
@@ -253,9 +259,10 @@
 
     <footer>
       <img
-        src="/images/logoGitPim.png  "
+        src="./images/logo_gite_pim.png"
         alt="logo-omemillionlines"
         class="align-self-md-center d-flex rounded-4 m-5"
+        style="filter: invert(1); width: 170px; margin-left: 50px"
       />
     </footer>
 
