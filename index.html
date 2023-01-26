@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
   <!-- Meta tags -->
@@ -45,36 +45,51 @@
 </head>
 
 <body>
-  <nav class="navbar h-100" style="background-color: #00003d">
-    <div class="container-fluid test">
-      <img class="rounded-4" src="./images/logoGitPim.png" alt="top-logo" style="filter: invert(1)" />
-      <div id="menu" class="gap-5 link-white d-none d-lg-flex">
-        <a href="./index.html" class="link-white text-decoration-none fs-6">Accueil
-        </a>
-        <a href="./reservation.html" class="link-white text-decoration-none fs-6">Réservez</a>
-      </div>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-        aria-controls="offcanvasNavbar">
-        <span class="bg-white btn-group navbar-toggler-icon d-lg-none"></span>
-      </button>
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">GIT PIM</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  <header>
+    <nav class="navbar h-100" style="background-color: #00003d">
+      <div class="container-fluid test">
+        <img src="./images/logo_gite_pim.png" alt="top-logo" style="filter: invert(1); width: 170px; margin-left: 50px;" />
+        <div id="menu" class="gap-5 link-white d-none d-lg-flex">
+          <a href="./index.html" class="link-white text-decoration-none fs-5">Accueil
+          </a>
+          <a href="./nos_services.html" class="link-white text-decoration-none fs-5">Nos services</a>
+          <a href="./reservation.html" class="link-white text-decoration-none fs-5">Réservez</a>
         </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Accueil</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Réservez</a>
-            </li>
-          </ul>
+        <div class="navbar navbar-light">
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar">
+          <span
+              class="btn-group navbar-toggler-icon  d-lg-none" style="filter: invert(1);"
+            ></span>
+        </button>
+      </div>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <img
+            src="./images/logo_gite_pim.png"
+            alt="top-logo"
+            style=" width: 170px; margin-left: 50px"
+          />
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html">Accueil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./nos_services.html">Nos services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./reservation.html">Réservez</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </header>
+  
 
   <div id="home">
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
@@ -137,7 +152,7 @@
       </div>
     </div>
 
-  <div id="get-involved">
+  <div id="get-involved" style="padding-bottom: 15px;">
     <h2 id="getinvolved" class="articletitle">SERVICES</h2>
     <hr class="articlehr" style="width: 9em; text-align: left; margin-left: 0" />
     <div id="getinvolvedcontent">
@@ -148,7 +163,6 @@
         <p class="involvedtext">Besoin d'une pause gourmande entre deux activités ? Venez vous installer
           dans notre restaurant et appréciez nos bons petits plats
         </p>
-        <button type="submit" class="btn-reservation">Réservez</button>
         <!-- <p class="involvedtext">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat,
             dignissimos.
@@ -161,9 +175,8 @@
 
         <h3 class="involvedtitle">Canoë / Kayak</h3>
         <p class="involvedtext">Optez pour l'activité du Canoë / Kayak et profitez-en
-          pour admirez le paysage autour de vous</p>
+          pour admirez le paysage autour de vous
         </p>
-        <button type="submit" class="btn-reservation">Réservez</button>
         <!-- <p class="involvedtext">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia,
             nostrum.
@@ -178,7 +191,6 @@
         <p class="involvedtext">On dit que le bonheur n'est pas au bout du chemin, il est le chemin !
           Réservez dès maintenant, votre randonnée.
         </p>
-        <button type="submit" class="btn-reservation">Réservez</button>
         <!-- <p class="involvedtext">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Repellendus, ratione!
@@ -186,6 +198,7 @@
           </p> -->
       </div>
     </div>
+    <div><a href="./nos_services.html"><button type="submit" class="btn-more">En savoir plus +</button></a></div>
   </div>
   <!-- /#get-involved -->
 
@@ -194,7 +207,7 @@
   </button>
 
   <footer>
-    <img src="./images/logoGitPim.png  " alt="logo-omemillionlines" class="align-self-md-center d-flex rounded-4 m-5" style="filter: invert(1)" />
+    <img src="./images/logo_gite_pim.png  " alt="logo-omemillionlines" class="align-self-md-center d-flex rounded-4 m-5" style="filter: invert(1); width: 170px; margin-left: 50px;" />
   </footer>
   <!-- /#back-to-top -->
   <script>
