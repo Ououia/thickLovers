@@ -186,9 +186,3 @@ function activityReservation() {
   dateSortie = document.getElementById("datesortieactivity").value;
   console.log(output, dateEntree, dateSortie, heureEntree);
 }
-
-var roomImage = document.getElementById("roomimage");
-
-console.log(roomImage);
-
-roomImage.addEventListener("click", () => {});
