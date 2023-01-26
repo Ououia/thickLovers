@@ -21,7 +21,7 @@ function getRoomReservation() {
                      <th>Vue sur</th>
                      <th>Date entrée</th>
                      <th>Date sortie</th>
-                     <th>Action</th>
+                     <th>Annuler une réservation</th>
                  </tr>
              </thead>`;
 
