@@ -70,9 +70,9 @@ function postData(idRoom) {
   xhr.onload = () => {
     console.log(xhr.readyState, xhr.status);
     if (xhr.readyState == 4 && xhr.status == 200) {
-      console.log(JSON.parse(xhr.responseText));
+      alert("Votre Réservation a été enregistrer avec Success");
     } else {
-      console.log("Error:");
+      alert("Il y a eu une erreur lors de votre reservation");
     }
   };
 
@@ -127,8 +127,9 @@ function postActivity() {
     console.log(xhr.readyState, xhr.status);
     if (xhr.readyState == 4 && xhr.status == 200) {
       console.log(JSON.parse(xhr.responseText));
+      alert("Votre Réservation a été enregistrer avec Success");
     } else {
-      console.log("Error:");
+      alert("Il y a eu une erreur lors de votre reservation");
     }
   };
 
