@@ -2,18 +2,17 @@ body {
   font-family: "Roboto", sans-serif;
   overflow-x: hidden;
 }
-.col-services{
-  margin:20px 80px;
+.col-services {
+  margin: 20px 215px;
 }
-.col-service{
-  margin:10px 40px;
+.col-service {
+  margin: 10px 40px;
 }
-.img_services{
-  width: 300px;
+.img_services {
+  width: 280px;
 }
-.hr-services{
+.hr-services {
   background-color: red;
-  /* height: 52px; */
   width: 70%;
   margin: 0 auto;
 }
@@ -22,11 +21,6 @@ body {
   width: 100px;
 }
 
-@media(max-width: 760px) {
-  .conteneur {
-    flex-direction: column-reverse;
-  }
-}
 /* css navbar */
 
 nav {
@@ -69,17 +63,15 @@ img.d-block.w-100 {
   height: 550px;
 }
 
-.btn-more , .btn-reservation{
-  width: 130px;
-  padding: 5px 0;
-  border-radius: 10px;
-  border: none;
-  background-color: white;
-}
-
-.btn-more:hover ,.btn-reservation:hover{
+.btn:hover {
   background-color: #1d12e8;
   color: white;
+  height: 37px;
+  width: 140px;
+}
+
+.col-services div a {
+  width: 140px;
 }
 
 .articletitle {
@@ -100,38 +92,19 @@ img.d-block.w-100 {
 }
 /*css module reservation*/
 
+#btn-room-reservation:hover {
+  width: 188px;
+}
+
 #formResa {
   text-align: start;
 }
 
-/* css who */
 
-#who {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin-bottom: 20px;
-}
-
-#who img {
-  margin-top: 40px;
-}
-
-#who p {
-  text-align: center;
-  font-size: 20px;
-  font-weight: 400;
-}
-
-#who p strong {
-  color: red;
-  font-weight: normal;
-}
 
 /* css involved */
 
-#get-involved {
+#all-services, #get-services {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -148,28 +121,15 @@ img.d-block.w-100 {
   background-color: #f5f5f5;
 }
 
-#getinvolvedcontent {
+#services-content {
   display: flex;
   gap: 10em;
-  padding: 0px 10em;
   margin-bottom: 30px;
 }
 
-/* #getinvolvedcontent button {
-  border: 1px solid rgb(38, 31, 238);
-  background-color: white;
-  border-radius: 3px;
-  font-size: 15px;
-  color: #f74c3c;
-}
-#getinvolvedcontent button:hover {
-  background-color: #f74c3c;
-  color: white;
-} */
-
-#students,
-#educators,
-#sponsors {
+#restaurant,
+#canoe-kayak,
+#randonnee {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -178,13 +138,13 @@ img.d-block.w-100 {
   gap: 10px;
 }
 
-.involvedtitle {
+.service-title {
   color: rgb(33, 30, 244);
   margin-top: 10px;
   font-family: "Arvo", serif;
 }
 
-.involvedtext {
+.service-text {
   width: 15em;
 }
 
@@ -215,21 +175,14 @@ input.w60p {
 /* MEDIA QUERIES */
 
 @media (max-width: 1200px) {
-  #who p {
-    padding: 0 6em;
-  }
 
-  #getinvolvedcontent {
-    gap: 7em;
-  }
-
-  .desktopbr {
-    display: none;
+  #services-content {
+    gap: 3em;
   }
 }
 
 @media only screen and (max-width: 992px) {
-  #getinvolvedcontent {
+  #services-content {
     display: flex;
     flex-direction: column;
     gap: 5em;
@@ -239,69 +192,41 @@ input.w60p {
     margin-left: 8em;
     margin-bottom: 2em;
   }
-  .desktopbr {
-    display: none;
+}
+@media only screen and (max-width: 1350px) and (min-width: 769px) {
+  .conteneur p,
+  .conteneur h4 {
+    margin-left: 130px;
+    width: 330px;
   }
 }
-@media only screen and (min-width: 757px) and (max-width: 768px){
-  .img_services{
-    width: 200px;
-  }
-}
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 769px) {
   nav {
     justify-content: space-between;
     padding: 25px;
   }
-  .col-service{
-    margin:10px 10px;
+  img.d-block.w-100 {
+    height: 420px;
   }
-  .col-services{
-    margin:20px 20px;
+  .col-service {
+    margin: 10px 10px;
+    flex-direction: column;
+  }
+  .conteneur {
+    flex-direction: column-reverse;
   }
 
-  .desktopbr {
-    display: none;
+  .img_services {
+    width: 200px;
+
   }
-  .servicehistoire {
-    width: 270px;
-    height: 240px;
-    object-fit: cover;
-}
+
+  .col-services {
+    margin: 20px 20px;
+  }
 
   #menu {
     display: none;
-  }
-
-  #menumobile {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-  }
-
-  #menumobile a {
-    color: #8f8f90;
-    display: flex;
-
-    border-radius: 3px;
-    text-decoration: inherit;
-    padding: 5px;
-
-    font-family: "Arvo", serif;
-    font-size: 13px;
-    font-weight: 600;
-  }
-
-  #menumobile a:hover {
-    color: #ffffff;
-    border: 2px white solid;
-  }
-
-  #hamburgermenu {
-    color: white;
-    display: block;
-    display: block;
   }
 
   #who p {
@@ -309,14 +234,14 @@ input.w60p {
     padding: 0;
   }
 
-  #getinvolvedcontent {
+  #services-content {
     display: flex;
     flex-direction: column;
     gap: 5em;
     padding: 0;
   }
 
-  .involvedtext {
+  .service-text {
     font-size: 13px;
   }
 
@@ -324,7 +249,7 @@ input.w60p {
     margin-left: 12px;
     margin-right: auto;
   }
-  .involvedtext {
+  .service-text {
     width: 100%;
   }
 }
