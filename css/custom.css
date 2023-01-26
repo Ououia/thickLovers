@@ -2,7 +2,31 @@ body {
   font-family: "Roboto", sans-serif;
   overflow-x: hidden;
 }
+.col-services{
+  margin:20px 80px;
+}
+.col-service{
+  margin:10px 40px;
+}
+.img_services{
+  width: 300px;
+}
+.hr-services{
+  background-color: red;
+  /* height: 52px; */
+  width: 70%;
+  margin: 0 auto;
+}
+.container-btn {
+  margin: 0 auto;
+  width: 100px;
+}
 
+@media(max-width: 760px) {
+  .conteneur {
+    flex-direction: column-reverse;
+  }
+}
 /* css navbar */
 
 nav {
@@ -18,7 +42,6 @@ nav {
   display: flex;
   gap: 15px;
 }
-
 #menu a {
   color: white; /* blue colors for links too */
   text-decoration: inherit; /* no underline */
@@ -29,14 +52,6 @@ nav {
 
 #menu a:hover {
   color: white;
-}
-
-#hamburgermenu {
-  display: none;
-}
-
-#menucollapse {
-  display: none;
 }
 
 .service {
@@ -54,7 +69,7 @@ img.d-block.w-100 {
   height: 550px;
 }
 
-.btn-reservation {
+.btn-more , .btn-reservation{
   width: 130px;
   padding: 5px 0;
   border-radius: 10px;
@@ -62,8 +77,8 @@ img.d-block.w-100 {
   background-color: white;
 }
 
-.btn-reservation:hover {
-  background-color: #0d6efd;
+.btn-more:hover ,.btn-reservation:hover{
+  background-color: #1d12e8;
   color: white;
 }
 
@@ -122,6 +137,7 @@ img.d-block.w-100 {
   justify-content: center;
   flex-direction: column;
   background-color: #f5f5f5;
+  padding-bottom: 25px;
 }
 
 #get-story {
@@ -177,7 +193,7 @@ img.d-block.w-100 {
 footer {
   height: 12em;
 
-  background-color: #0d6efd;
+  background-color: #00003d;
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
@@ -227,16 +243,31 @@ input.w60p {
     display: none;
   }
 }
-
+@media only screen and (min-width: 757px) and (max-width: 768px){
+  .img_services{
+    width: 200px;
+  }
+}
 @media only screen and (max-width: 768px) {
   nav {
     justify-content: space-between;
     padding: 25px;
   }
+  .col-service{
+    margin:10px 10px;
+  }
+  .col-services{
+    margin:20px 20px;
+  }
 
   .desktopbr {
     display: none;
   }
+  .servicehistoire {
+    width: 270px;
+    height: 240px;
+    object-fit: cover;
+}
 
   #menu {
     display: none;
