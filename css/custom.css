@@ -79,7 +79,7 @@ img.d-block.w-100 {
   font-size: 30px;
   margin-top: 25px;
   font-weight: 500;
-  font-family: "Arvo", serif;
+  font-family: cursive;
 }
 
 .articlehr {
@@ -100,11 +100,10 @@ img.d-block.w-100 {
   text-align: start;
 }
 
-
-
 /* css involved */
 
-#all-services, #get-services {
+#all-services,
+#get-services {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -141,7 +140,7 @@ img.d-block.w-100 {
 .service-title {
   color: rgb(33, 30, 244);
   margin-top: 10px;
-  font-family: "Arvo", serif;
+  font-family: cursive;
 }
 
 .service-text {
@@ -175,7 +174,6 @@ input.w60p {
 /* MEDIA QUERIES */
 
 @media (max-width: 1200px) {
-
   #services-content {
     gap: 3em;
   }
@@ -218,7 +216,6 @@ input.w60p {
 
   .img_services {
     width: 200px;
-
   }
 
   .col-services {

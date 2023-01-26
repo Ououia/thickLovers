@@ -14,10 +14,6 @@
     <meta property="og:url" content="https://ououia.github.io/thicklovers/" />
     <meta property="og:title" content="Gite Pim" />
     <meta property="og:description" content="Site ECF Gite Pim" />
-    <meta
-      property="og:image"
-      content="https://ououia.github.io/thicklovers/images/logo_gite_pim.jpg"
-    />
     <!-- end Meta -->
 
     <!-- bootstrap -->
@@ -79,38 +75,35 @@
               >Réservez</a
             >
             <a
-            href="./mesReservations.html"
-            class="link-white text-decoration-none fs-5"
-            >Mes réservations</a
-          >
-          </div>
-          <div class="navbar navbar-light">
-            <button
-              class="navbar-toggler d-lg-none"
-              type="button"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasNavbar"
-              aria-controls="offcanvasNavbar"
+              href="./mesReservations.html"
+              class="link-white text-decoration-none fs-5"
+              >Mes réservations</a
             >
-              <span
-                class="btn-group navbar-toggler-icon d-lg-none"
-                style="filter: invert(1)"
-              ></span>
-            </button>
           </div>
+          <button
+            class="navbar-toggler d-lg-none"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+          >
+            <span
+              class="btn-group navbar-toggler-icon"
+              style="filter: invert(1)"
+            ></span>
+          </button>
           <div
             class="offcanvas offcanvas-end"
             tabindex="-1"
             id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
           >
             <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-                <img
-                  src="./images/logo_gite_pim.png"
-                  alt="top-logo"
-                  style="width: 170px; margin-left: 50px"
-                />
-              </h5>
+              <img
+                src="./images/logo_gite_pim.png"
+                alt="top-logo"
+                style="width: 170px; margin-left: 50px"
+              />
               <button
                 type="button"
                 class="btn-close"
@@ -132,7 +125,9 @@
                   <a class="nav-link" href="./reservation.html">Réservez</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="./mesReservations.html">Mes réservations</a>
+                  <a class="nav-link" href="./mesReservations.html"
+                    >Mes réservations</a
+                  >
                 </li>
               </ul>
             </div>
@@ -253,7 +248,7 @@
     </div>
     <footer>
       <img
-        src="./images/logo_gite_pim.png  "
+        src="./images/logo_gite_pim.png"
         alt="logo-omemillionlines"
         class="align-self-md-center d-flex rounded-4 m-5"
         style="filter: invert(1); width: 170px; margin-left: 50px"
