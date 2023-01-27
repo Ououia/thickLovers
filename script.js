@@ -42,6 +42,14 @@ function sendReservation() {
   selectElement = document.getElementById("roomlandscape");
   roomLandscape = selectElement.value;
   dateSortie = document.getElementById("dateSortie").value;
+  let today = new Date();
+  let year = today.getFullYear();
+  let month = today.getMonth() + 1;
+  let day = today.getDate();
+  let dateString = today.toISOString().slice(0, 10);
+  dateEntree = dateString;
+  dateSortie = dateString;
+  console.log(year, month, day, dateString);
 
   var html = new XMLHttpRequest();
   html.onreadystatechange = function () {
