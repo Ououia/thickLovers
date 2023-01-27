@@ -51,6 +51,9 @@ function sendReservation() {
   dateSortie = dateString;
   console.log(year, month, day, dateString);
 
+
+
+
   var html = new XMLHttpRequest();
   html.onreadystatechange = function () {
     if (html.readyState == XMLHttpRequest.DONE) {
