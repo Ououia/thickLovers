@@ -51,9 +51,10 @@ function sendReservation() {
   dateSortie = dateString;
   console.log(year, month, day, dateString);
 
-
-
-
+  if(dateEntree==""||dateSortie==""){
+    alert("Il manque une saisie de date");
+  }else{
+    
   var html = new XMLHttpRequest();
   html.onreadystatechange = function () {
     if (html.readyState == XMLHttpRequest.DONE) {
@@ -71,6 +72,8 @@ function sendReservation() {
     true
   );
   html.send(null);
+  }
+
 }
 
 function postData(idRoom) {
@@ -129,39 +132,42 @@ function postActivity() {
   dateEntree = document.getElementById("dateentreeactivity").value;
   heureEntree = document.getElementById("heureentree").value;
   heureSortie = document.getElementById("datesortieactivity").value;
-
-  const xhr = new XMLHttpRequest();
-  xhr.open("POST", "https://tst.quantiq.nc/devweb-cfa/api/index.php", true);
-  xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-
-  xhr.onload = () => {
-    console.log(xhr.readyState, xhr.status);
-    if (xhr.readyState == 4 && xhr.status == 200) {
-      console.log(JSON.parse(xhr.responseText));
-      alert("Votre Réservation a été enregistrer avec Success");
-    } else {
-      alert("Il y a eu une erreur lors de votre reservation");
-    }
-  };
-
-  xhr.send(
-    "service=" +
-      "gite" +
-      "&object=" +
-      "activityreservation" +
-      "&action=" +
-      "create" +
-      "&token=" +
-      "D@lL@5Mùl!P@5S3" +
-      "&activite=" +
-      typeActivity +
-      "&date=" +
-      dateEntree +
-      "&heureDebut=" +
-      heureEntree +
-      "&heureFin=" +
-      heureSortie
-  );
+  if(dateEntree==""||heureEntree==""||heureSortie==""){
+    alert("Il manque une saisie");
+  }else{
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", "https://tst.quantiq.nc/devweb-cfa/api/index.php", true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+  
+    xhr.onload = () => {
+      console.log(xhr.readyState, xhr.status);
+      if (xhr.readyState == 4 && xhr.status == 200) {
+        console.log(JSON.parse(xhr.responseText));
+        alert("Votre Réservation a été enregistrer avec Success");
+      } else {
+        alert("Il y a eu une erreur lors de votre reservation");
+      }
+    };
+  
+    xhr.send(
+      "service=" +
+        "gite" +
+        "&object=" +
+        "activityreservation" +
+        "&action=" +
+        "create" +
+        "&token=" +
+        "D@lL@5Mùl!P@5S3" +
+        "&activite=" +
+        typeActivity +
+        "&date=" +
+        dateEntree +
+        "&heureDebut=" +
+        heureEntree +
+        "&heureFin=" +
+        heureSortie
+    );
+  }
 }
 
 // BUTTON ARROW UP
