@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&display=swap");
+
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Comic Neue", cursive;
   overflow-x: hidden;
 }
 .col-services {
@@ -78,8 +80,8 @@ img.d-block.w-100 {
   color: #1d12e8;
   font-size: 30px;
   margin-top: 25px;
-  font-weight: 500;
-  font-family: cursive;
+  font-weight: 800;
+  font-family: "Comic Neue", cursive;
 }
 
 .articlehr {
@@ -140,7 +142,7 @@ img.d-block.w-100 {
 .service-title {
   color: rgb(33, 30, 244);
   margin-top: 10px;
-  font-family: cursive;
+  font-family: "Comic Neue", cursive;
 }
 
 .service-text {
@@ -199,6 +201,9 @@ input.w60p {
   }
 }
 @media only screen and (max-width: 769px) {
+  .reservation {
+    margin: 0 120px;
+  }
   nav {
     justify-content: space-between;
     padding: 25px;
@@ -248,5 +253,21 @@ input.w60p {
   }
   .service-text {
     width: 100%;
+  }
+}
+@media only screen and (max-width: 654px) {
+  .reservation {
+    margin: 0 20px;
+    flex-direction: column;
+  }
+
+  .service {
+    width: 93vw;
+    height: 65vh;
+    object-fit: cover;
+  }
+  .servicehistoire {
+    width: 91vw;
+    object-fit: cover;
   }
 }

@@ -142,7 +142,7 @@
     >
       <div>
         <h3 class="articletitle text-center mb-5 text-uppercase">Chambres</h3>
-        <div class="d-flex gap-5">
+        <div class="d-flex gap-5 reservation">
           <div>
             <span>Type de chambre :</span>
             <select class="form-select mb-2" id="typeofroom"></select>
@@ -155,8 +155,6 @@
                 type="date"
                 id="dateEntree"
                 name="partydate"
-                pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}"
-                required
               />
             </p>
             <p>
@@ -166,11 +164,8 @@
                 type="date"
                 id="dateSortie"
                 name="partydate"
-                pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}"
-                required
               />
             </p>
-
             <input
               class="btn btn-primary"
               type="button"
@@ -179,7 +174,7 @@
             />
           </div>
 
-          <div id="sponsors">
+          <div class="sponsors">
             <img src="./images/room1.jpg" alt="" class="service rounded-4" />
 
             <h3 class="involvedtitle mt-4 text-center text-info">
@@ -191,7 +186,7 @@
 
       <div>
         <h3 class="articletitle text-center mb-5 text-uppercase">activités</h3>
-        <div class="d-flex gap-5">
+        <div class="d-flex gap-5 reservation">
           <div>
             <span>Type d'activité :</span>
             <select class="form-select mb-2" id="typeofactivity"></select>
@@ -239,7 +234,7 @@
             />
           </div>
 
-          <div id="sponsors">
+          <div class="sponsors">
             <img src="./images/velo.jpeg" alt="" class="service rounded-4" />
 
             <h3 class="involvedtitle mt-4 text-center text-info">
