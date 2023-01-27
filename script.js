@@ -43,6 +43,9 @@ function sendReservation() {
   roomLandscape = selectElement.value;
   dateSortie = document.getElementById("dateSortie").value;
 
+
+
+
   var html = new XMLHttpRequest();
   html.onreadystatechange = function () {
     if (html.readyState == XMLHttpRequest.DONE) {
