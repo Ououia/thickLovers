@@ -42,38 +42,28 @@ function sendReservation() {
   selectElement = document.getElementById("roomlandscape");
   roomLandscape = selectElement.value;
   dateSortie = document.getElementById("dateSortie").value;
-  let today = new Date();
-  let year = today.getFullYear();
-  let month = today.getMonth() + 1;
-  let day = today.getDate();
-  let dateString = today.toISOString().slice(0, 10);
-  dateEntree = dateString;
-  dateSortie = dateString;
-  console.log(year, month, day, dateString);
 
-  if(dateEntree==""||dateSortie==""){
+  if (dateEntree == "" || dateSortie == "") {
     alert("Il manque une saisie de date");
-  }else{
-    
-  var html = new XMLHttpRequest();
-  html.onreadystatechange = function () {
-    if (html.readyState == XMLHttpRequest.DONE) {
-      parsedResponse = JSON.parse(html.responseText);
-      idRoom = parsedResponse[0].id;
-      postData(idRoom);
-    }
-  };
-  html.open(
-    "GET",
-    "https://tst.quantiq.nc/devweb-cfa/api/index.php?service=gite&object=room&action=list&type=" +
-      typeRoom +
-      "&landscape=" +
-      roomLandscape,
-    true
-  );
-  html.send(null);
+  } else {
+    var html = new XMLHttpRequest();
+    html.onreadystatechange = function () {
+      if (html.readyState == XMLHttpRequest.DONE) {
+        parsedResponse = JSON.parse(html.responseText);
+        idRoom = parsedResponse[0].id;
+        postData(idRoom);
+      }
+    };
+    html.open(
+      "GET",
+      "https://tst.quantiq.nc/devweb-cfa/api/index.php?service=gite&object=room&action=list&type=" +
+        typeRoom +
+        "&landscape=" +
+        roomLandscape,
+      true
+    );
+    html.send(null);
   }
-
 }
 
 function postData(idRoom) {
@@ -132,13 +122,13 @@ function postActivity() {
   dateEntree = document.getElementById("dateentreeactivity").value;
   heureEntree = document.getElementById("heureentree").value;
   heureSortie = document.getElementById("datesortieactivity").value;
-  if(dateEntree==""||heureEntree==""||heureSortie==""){
+  if (dateEntree == "" || heureEntree == "" || heureSortie == "") {
     alert("Il manque une saisie");
-  }else{
+  } else {
     const xhr = new XMLHttpRequest();
     xhr.open("POST", "https://tst.quantiq.nc/devweb-cfa/api/index.php", true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-  
+
     xhr.onload = () => {
       console.log(xhr.readyState, xhr.status);
       if (xhr.readyState == 4 && xhr.status == 200) {
@@ -148,7 +138,7 @@ function postActivity() {
         alert("Il y a eu une erreur lors de votre reservation");
       }
     };
-  
+
     xhr.send(
       "service=" +
         "gite" +
